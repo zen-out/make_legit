@@ -44,7 +44,7 @@ function clean(data) {
     console.log("🚀 ~ file: module.js ~ line 27 ~ clean ~ type", type)
     switch (type) {
         case "array":
-            return trimArr(data)
+            let cleaned = trimArr(data)
         case "object":
             let trimmed = trimObj(data)
             return trimmed;
@@ -168,29 +168,32 @@ function formatDate(data) {
  * @returns {number}
  */
 function formatNumber(data) {
+    let num;
     // string 
     let whatsThis = getType(data)
     if (whatsThis === "string") {
-        return parseInt(data)
+        num = parseInt(data)
     } else if (whatsThis === "array") {
         let sum = 0;
         for (let i = 0; i < data.length; i++) {
             console.log(data[i])
             if (typeof data[i] === "number") {
                 sum += data[i]
-                console.log("🚀 ~ file: playground.js ~ line 86 ~ formatNumber ~ sum", sum)
             }
         }
-        return sum;
+        num = sum;
     } else if (whatsThis === "date") {
         let formatDate = formatDateTime.format(data, "YYYYMMDDHHMMSS")
         let parsed = parseInt(formatDate)
-        return parsed;
+        num = parsed;
     } else {
-        return undefined
+        num = undefined
     }
-    // array  
-
+    if (isNaN(num)) {
+        return undefined;
+    } else {
+        return num;
+    }
 }
 
 /**
@@ -206,11 +209,9 @@ function formatArray(data) {
     let whatsThis = getType(data)
     if (whatsThis === "string") {
         newArr.push(data)
-        return newArr;
 
     } else if (whatsThis === "number") {
         newArr.push(data)
-        return newArr;
     } else if (whatsThis === "object") {
         let item = ""
         let keys = Object.keys(data)
@@ -219,17 +220,19 @@ function formatArray(data) {
             item += keys[i].toString() + ": " + values[i].toString()
             newArr.push(item)
         }
-        return newArr;
     } else if (whatsThis === "date") {
         let formatted = formatDateTime.format(data, "ll")
         newArr.push(formatted)
-        return newArr;
     } else if (whatsThis === "boolean") {
         newArr.push(data)
-        return newArr;
 
     } else {
-        return undefined
+        newArr = undefined
+    }
+    if (Array.isArray(newArr)) {
+        return newArr;
+    } else {
+        return undefined;
     }
     // array  
 
@@ -248,9 +251,13 @@ function formatObject(data) { // string
         for (let i = 0; i < data.length; i++) {
             newObj[i] = data[i]
         }
+    } else {
+        newObj = undefined;
+    }
+    if (typeof newObj === "object") {
         return newObj;
     } else {
-        return undefined
+        return undefined;
     }
 }
 /**
@@ -262,9 +269,10 @@ function formatObject(data) { // string
 
 function formatString(data) {
     // string 
+    let string;
     let whatsThis = getType(data)
     if (whatsThis === "number") {
-        return data.toString()
+        string = data.toString()
     } else if (whatsThis === "array") {
         let stringed = ""
         for (let i = 0; i < data.length; i++) {
@@ -274,16 +282,21 @@ function formatString(data) {
                 stringed += data[i]
             }
         }
-        return stringed;
+        string = stringed;
     } else if (whatsThis === "object") {
-
-        return JSON.stringify(data)
+        string = JSON.stringify(data)
     } else if (whatsThis === "date") {
-        return formatDateTime.format(data, "ll")
+        let getDate = formatDateTime.format(data, "ll")
+        string = getDate;
     } else if (whatsThis === "boolean") {
-        return data.toString()
+        string = data.toString()
     } else {
-        return undefined
+        string = undefined
+    }
+    if (typeof string === "string") {
+        return string;
+    } else {
+        return undefined;
     }
 }
 
@@ -296,12 +309,23 @@ function formatString(data) {
  * @returns {boolean}
  */
 function formatBoolean(data) {
+    let bool;
     // string 
     let whatsThis = getType(data)
     if (whatsThis === "string") {
-        return data.toString()
+        let getType = data.toLowerCase()
+        if (getType === "true") {
+            bool = true;
+        } else if (getType === "false") {
+            bool = false;
+        }
     } else {
         return undefined
+    }
+    if (typeof bool === "boolean") {
+        return bool;
+    } else {
+        return undefined;
     }
 }
 
