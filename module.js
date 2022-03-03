@@ -41,7 +41,6 @@ function getType(data) {
  */
 function clean(data) {
     let type = getType(data)
-    console.log("🚀 ~ file: module.js ~ line 27 ~ clean ~ type", type)
     switch (type) {
         case "array":
             let cleaned = trimArr(data)
@@ -97,12 +96,12 @@ function format(data, type) {
  * @returns {any}
  */
 function trimObj(obj) {
-    console.log("trim obj")
+    // console.log("trim obj")
     if (obj instanceof Date) {
         return obj;
     }
     obj = cleanDeep(obj)
-    console.log("🚀 ~ file: module.js ~ line 72 ~ trimObj ~ obj", obj)
+        // console.log("🚀 ~ file: module.js ~ line 72 ~ trimObj ~ obj", obj)
     for (const [key, value] of Object.entries(obj)) {
         if (typeof value === "string") {
             let trimmed = value.trim()
@@ -176,7 +175,7 @@ function formatNumber(data) {
     } else if (whatsThis === "array") {
         let sum = 0;
         for (let i = 0; i < data.length; i++) {
-            console.log(data[i])
+            // console.log(data[i])
             if (typeof data[i] === "number") {
                 sum += data[i]
             }
