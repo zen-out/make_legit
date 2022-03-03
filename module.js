@@ -1,3 +1,10 @@
+/**
+ * 描述
+ * @author zen-out
+ * @date 2022-03-03
+ * @param {any} "format_date_time_moment/node"
+ * @returns {any}
+ */
 const { formatDateTime } = require("format_date_time_moment/node")
 const cleanDeep = require('clean-deep')
 const check = require("check-types")
@@ -49,10 +56,10 @@ function clean(data) {
 }
 
 /**
- * format
+ * format(data, type)
  * @date 2022-03-03
  * @param {any} data
- * @param {any} type
+ * @param {string} date, string, array, object, boolean or number
  * @returns {any}
  */
 function format(data, type) {
@@ -82,6 +89,13 @@ function format(data, type) {
 }
 
 
+/**
+ * trimObj(obj)
+ * @author zen-out
+ * @date 2022-03-03
+ * @param {any} obj
+ * @returns {any}
+ */
 function trimObj(obj) {
     console.log("trim obj")
     if (obj instanceof Date) {
@@ -98,6 +112,13 @@ function trimObj(obj) {
     return obj;
 }
 
+/**
+ * trimArr(arr)
+ * @author zen-out
+ * @date 2022-03-03
+ * @param {any} arr
+ * @returns {array}
+ */
 function trimArr(arr) {
     let newArr = []
     for (let i = 0; i < arr.length; i++) {
@@ -115,6 +136,13 @@ function trimArr(arr) {
     return newArr;
 }
 
+/**
+ * formatDate(data)
+ * @author zen-out
+ * @date 2022-03-03
+ * @param {any} data
+ * @returns {date}
+ */
 function formatDate(data) {
     let whatsThis = getType(data)
     if (whatsThis === "string") {
@@ -131,7 +159,15 @@ function formatDate(data) {
 
 
 
-function formatNumber(data, type) {
+/**
+ * formatNumber(data)
+ * @author zen-out
+ * @date 2022-03-03
+ * @param {any} data
+ * @param {any} type
+ * @returns {number}
+ */
+function formatNumber(data) {
     // string 
     let whatsThis = getType(data)
     if (whatsThis === "string") {
@@ -157,7 +193,14 @@ function formatNumber(data, type) {
 
 }
 
-function formatArray(data, type) {
+/**
+ * formatArray(data)
+ * @author zen-out
+ * @date 2022-03-03
+ * @param {any} data
+ * @returns {array}
+ */
+function formatArray(data) {
     // string 
     let newArr = []
     let whatsThis = getType(data)
@@ -192,6 +235,12 @@ function formatArray(data, type) {
 
 }
 
+/**
+ * formatObject(data)
+ * @date 2022-03-03
+ * @param {any} data
+ * @returns {object}
+ */
 function formatObject(data) { // string 
     let newObj = {}
     let whatsThis = getType(data)
@@ -204,6 +253,12 @@ function formatObject(data) { // string
         return undefined
     }
 }
+/**
+ * formatString(data)
+ * @date 2022-03-03
+ * @param {any} data
+ * @returns {string}
+ */
 
 function formatString(data) {
     // string 
@@ -233,6 +288,13 @@ function formatString(data) {
 }
 
 
+/**
+ * formatBoolean(data)
+ * @author zen-out
+ * @date 2022-03-03
+ * @param {any} data
+ * @returns {boolean}
+ */
 function formatBoolean(data) {
     // string 
     let whatsThis = getType(data)
