@@ -7,30 +7,18 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
         // specifies the name of the library that will be used in other module enviornemnts
-        library: 'make_legit',
+        library: 'myLibrary',
         // library target allows you to speicfy how the module will be exposed
         libraryTarget: 'umd',
         // to make it available in both browser and node, you have to specify option to this
         globalObject: 'this'
     },
     externals: {
-        when_you_free: {
-            commonjs: 'when_you_free',
-            commonjs2: 'when_you_free',
-            amd: 'when_you_free',
-            root: 'when_you_free',
-        },
-        cleanDeep: {
-            commonjs: 'clean-deep',
-            commonjs2: 'clean-deep',
-            amd: 'clean-deep',
-            root: 'clean-deep',
-        },
-        check_types: {
-            commonjs: 'check-types',
-            commonjs2: 'check-types',
-            amd: 'check-types',
-            root: 'check-types',
+        moment: {
+            commonjs: 'moment',
+            commonjs2: 'moment',
+            amd: 'moment',
+            root: 'moment',
         }
     },
     module: {
