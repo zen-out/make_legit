@@ -7,19 +7,11 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
         // specifies the name of the library that will be used in other module enviornemnts
-        library: 'myLibrary',
+        library: 'make_legit',
         // library target allows you to speicfy how the module will be exposed
         libraryTarget: 'umd',
         // to make it available in both browser and node, you have to specify option to this
         globalObject: 'this'
-    },
-    externals: {
-        moment: {
-            commonjs: 'moment',
-            commonjs2: 'moment',
-            amd: 'moment',
-            root: 'moment',
-        }
     },
     module: {
         rules: [{
