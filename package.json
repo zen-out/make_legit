@@ -1,6 +1,6 @@
 {
     "name": "make_legit",
-    "version": "1.0.6",
+    "version": "1.1.0",
     "description": "cleans and formats data the way you would like",
     "main": "index.js",
     "scripts": {
