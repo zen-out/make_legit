@@ -5,10 +5,18 @@ let shouldBeString2 = make_legit.format({ "start": 2, "edit": 3, "end": 4 }, "st
 let shouldBeString3 = make_legit.format([2, 3, 4], "string")
 let shouldTrim = make_legit.format("  trim white space ", "string")
 let shouldTrim2 = make_legit.format({ "a": "fffff      f   " }, "object")
+console.log("🚀 ~ file: playground.js ~ line 8 ~ shouldTrim2", shouldTrim2)
 let boolean = make_legit.format(false, "boolean")
 let getBoolean = make_legit.format("true", "boolean")
 let num = make_legit.format("3", "number")
 let toPost = make_legit.format(new Date(), "date")
 let trimObj = make_legit.trimObj({ test: "asdfasdf asdf ", whatsup: undefined, no: null })
+console.log("🚀 ~ file: playground.js ~ line 13 ~ trimObj", trimObj)
 let trimArr = make_legit.trimArr([{ test: "asdfasdf asdf ", whatsup: undefined, no: null }, { test: "asdfasdf asdf ", whatsup: undefined, no: null }])
 let getType = make_legit.getType([])
+
+let getDate = make_legit.getType("Dec 11 2022")
+
+let getDate2 = make_legit.getType(new Date())
+console.log("🚀 ~ file: playground.js ~ line 19 ~ getDate2", getDate2)
+console.log(getDate)
