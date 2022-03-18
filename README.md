@@ -31,18 +31,8 @@ console.log("🚀 ~ file: playground.js ~ line 20 ~ toPost", toPost)
  ``` const make_legit =  require('make_legit')```
 
 ## If utilizing in html...: 
-```html 
-   <script src="./node_modules/make_legit/index.js"></script> 
-   ``` 
- ```js
- $(() => {  
-
-            let shouldTrim2 = make_legit.format({
-                "a": "fffff      f   "
-            }, "object")
-            console.log("make legit", shouldTrim2)
- })
- ```
+```<script src="https://cdn.jsdelivr.net/npm/make_legit/dist/index.js"></script> ``` 
+ ``` const output =  make_legit.method(parameter)```
 
 ## Functions
 
@@ -80,9 +70,9 @@ console.log("🚀 ~ file: playground.js ~ line 20 ~ toPost", toPost)
 **Date**: 2022-03-03  
 **Author**: zen-out  
 
-| Param | Type             |
-|-------|------------------|
-| obj   | <code>any</code> |
+| Param | Type |
+| --- | --- |
+| obj | <code>any</code> | 
 
 **Example**  
 ```js
@@ -95,9 +85,9 @@ trimObj(obj)
 **Date**: 2022-03-03  
 **Author**: zen-out  
 
-| Param | Type             |
-|-------|------------------|
-| arr   | <code>any</code> |
+| Param | Type |
+| --- | --- |
+| arr | <code>any</code> | 
 
 **Example**  
 ```js
@@ -109,9 +99,9 @@ trimArr(arr)
 **Kind**: global function  
 **Date**: 2022-03-03  
 
-| Param | Type             |
-|-------|------------------|
-| data  | <code>any</code> |
+| Param | Type |
+| --- | --- |
+| data | <code>any</code> | 
 
 **Example**  
 ```js
@@ -124,9 +114,9 @@ clean(data)
 **Date**: 2022-03-03  
 **Author**: zen-out  
 
-| Param | Type             |
-|-------|------------------|
-| data  | <code>any</code> |
+| Param | Type |
+| --- | --- |
+| data | <code>any</code> | 
 
 **Example**  
 ```js
@@ -139,10 +129,10 @@ formatDate(data)
 **Date**: 2022-03-03  
 **Author**: zen-out  
 
-| Param | Type             |
-|-------|------------------|
-| data  | <code>any</code> |
-| type  | <code>any</code> |
+| Param | Type |
+| --- | --- |
+| data | <code>any</code> | 
+| type | <code>any</code> | 
 
 **Example**  
 ```js
@@ -155,9 +145,9 @@ formatNumber(data)
 **Date**: 2022-03-03  
 **Author**: zen-out  
 
-| Param | Type             |
-|-------|------------------|
-| data  | <code>any</code> |
+| Param | Type |
+| --- | --- |
+| data | <code>any</code> | 
 
 **Example**  
 ```js
@@ -169,9 +159,9 @@ formatArray(data)
 **Kind**: global function  
 **Date**: 2022-03-03  
 
-| Param | Type             |
-|-------|------------------|
-| data  | <code>any</code> |
+| Param | Type |
+| --- | --- |
+| data | <code>any</code> | 
 
 **Example**  
 ```js
@@ -185,9 +175,9 @@ formatString(data)
 **Kind**: global function  
 **Date**: 2022-03-03  
 
-| Param | Type             |
-|-------|------------------|
-| data  | <code>any</code> |
+| Param | Type |
+| --- | --- |
+| data | <code>any</code> | 
 
 <a name="formatBoolean"></a>
 
@@ -196,9 +186,9 @@ formatString(data)
 **Date**: 2022-03-03  
 **Author**: zen-out  
 
-| Param | Type             |
-|-------|------------------|
-| data  | <code>any</code> |
+| Param | Type |
+| --- | --- |
+| data | <code>any</code> | 
 
 **Example**  
 ```js
@@ -211,9 +201,9 @@ formatBoolean(data)
 **Returns**: <code>string</code> - data, number, array, string object, boolean undefined  
 **Date**: 2022-03-03  
 
-| Param | Type             |
-|-------|------------------|
-| data  | <code>any</code> |
+| Param | Type |
+| --- | --- |
+| data | <code>any</code> | 
 
 **Example**  
 ```js
@@ -227,7 +217,7 @@ format(data, type)
 **Kind**: global function  
 **Date**: 2022-03-03  
 
-| Param | Type                | Description                              |
-|-------|---------------------|------------------------------------------|
-| data  | <code>any</code>    |                                          |
+| Param | Type | Description |
+| --- | --- | --- |
+| data | <code>any</code> |  |
 | date, | <code>string</code> | string, array, object, boolean or number |
