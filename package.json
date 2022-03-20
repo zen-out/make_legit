@@ -18,12 +18,10 @@
     "author": "zen-out",
     "license": "MIT",
     "dependencies": {
-        "define_me": "^1.2.7",
         "check-types": "^11.1.2",
         "clean-deep": "^3.4.0",
-        "whats_wrong": "^1.3.1"
+        "when_you_free": "^1.4.17"
     },
-    "devDependencies": {},
     "homepage": "https://zen-out.github.io/packages/make_legit",
     "repository": {
         "type": "git",
