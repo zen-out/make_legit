@@ -2,7 +2,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![NPM Downloads](https://img.shields.io/npm/dw/make_legit)
-
 ```js
 const make_legit = require("make_legit")
 let shouldBeString = make_legit.format(3, "string")
@@ -26,6 +25,41 @@ console.log("🚀 ~ file: playground.js ~ line 19 ~ num", num)
 let toPost = make_legit.format(new Date(), "date")
 
 console.log("🚀 ~ file: playground.js ~ line 20 ~ toPost", toPost)
+
+let getType = make_legit.getType([])
+let getObject = make_legit.getType({ test: "whatsup" })
+console.log("🚀 ~ file: playground.js ~ line 20 ~ getObject", getObject)
+let getDate = make_legit.getType("Dec 11 2022")
+
+let getDate2 = make_legit.getType(new Date())
+let first = {
+    "public": true,
+    "seconds": 92,
+    "status": "to do",
+    "importance": 2,
+    "usefulness": 1,
+    "difficulty": 1,
+    "user_id": 4,
+    "id": 1
+}
+
+let hourglass = {
+    id: "number",
+    user_id: "number",
+    email: "string",
+    seconds: "number",
+    public: "boolean",
+    status: "string",
+    usefulness: "number",
+    importance: "number",
+    difficulty: "number",
+    start: "date",
+    edit: "date",
+    end: "date",
+    created: "date"
+}
+let result = make_legit.formatActualObject(first, hourglass)
+
 ```
 ## Instructions: 
 ```npm install make_legit ``` 
