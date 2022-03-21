@@ -1,4 +1,8 @@
 # make_legit
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![NPM Downloads](https://img.shields.io/npm/dw/make_legit)
+
 ```js
 const make_legit = require("make_legit")
 let shouldBeString = make_legit.format(3, "string")
@@ -23,14 +27,12 @@ let toPost = make_legit.format(new Date(), "date")
 
 console.log("🚀 ~ file: playground.js ~ line 20 ~ toPost", toPost)
 ```
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![NPM Downloads](https://img.shields.io/npm/dw/make_legit)
 ## Instructions: 
 ```npm install make_legit ``` 
  ``` const make_legit =  require('make_legit')```
 
 ## If utilizing in html...: 
-```<script src="https://cdn.jsdelivr.net/npm/make_legit/index.js"></script> ``` 
+```<script src="./node_modules/make_legit/index.js"></script> ``` 
  ``` const output =  make_legit.method(parameter)```
 
 ## Functions
@@ -42,6 +44,9 @@ console.log("🚀 ~ file: playground.js ~ line 20 ~ toPost", toPost)
 <dd></dd>
 <dt><a href="#clean">clean(data)</a> ⇒ <code>any</code></dt>
 <dd></dd>
+<dt><a href="#format">format(data, date,)</a> ⇒ <code>any</code></dt>
+<dd><p>format(data, type)</p>
+</dd>
 <dt><a href="#formatDate">formatDate(data)</a> ⇒ <code>date</code></dt>
 <dd></dd>
 <dt><a href="#formatNumber">formatNumber(data, type)</a> ⇒ <code>number</code></dt>
@@ -55,11 +60,10 @@ console.log("🚀 ~ file: playground.js ~ line 20 ~ toPost", toPost)
 </dd>
 <dt><a href="#formatBoolean">formatBoolean(data)</a> ⇒ <code>boolean</code></dt>
 <dd></dd>
+<dt><a href="#formatActualObject">formatActualObject(actual, expected)</a> ⇒ <code>any</code></dt>
+<dd></dd>
 <dt><a href="#getType">getType(data)</a> ⇒ <code>string</code></dt>
 <dd></dd>
-<dt><a href="#format">format(data, date,)</a> ⇒ <code>any</code></dt>
-<dd><p>format(data, type)</p>
-</dd>
 </dl>
 
 <a name="trimObj"></a>
@@ -106,6 +110,19 @@ trimArr(arr)
 ```js
 clean(data)
 ```
+<a name="format"></a>
+
+## format(data, date,) ⇒ <code>any</code>
+format(data, type)
+
+**Kind**: global function  
+**Date**: 2022-03-03  
+
+| Param | Type                | Description                              |
+|-------|---------------------|------------------------------------------|
+| data  | <code>any</code>    |                                          |
+| date, | <code>string</code> | string, array, object, boolean or number |
+
 <a name="formatDate"></a>
 
 ## formatDate(data) ⇒ <code>date</code>
@@ -193,6 +210,49 @@ formatString(data)
 ```js
 formatBoolean(data)
 ```
+<a name="formatActualObject"></a>
+
+## formatActualObject(actual, expected) ⇒ <code>any</code>
+**Kind**: global function  
+**Date**: 2022-03-22  
+**Author**: zen-out  
+
+| Param    | Type             |
+|----------|------------------|
+| actual   | <code>any</code> |
+| expected | <code>any</code> |
+
+**Example**  
+```js
+let first = {
+        "public": true,
+        "seconds": 92,
+        "status": "to do",
+        "importance": 2,
+        "usefulness": 1,
+        "difficulty": 1,
+        "user_id": 4,
+        "id": 1
+    }
+
+    let hourglass = {
+        id: "number",
+        user_id: "number",
+        email: "string",
+        seconds: "number",
+        public: "boolean",
+        status: "string",
+        usefulness: "number",
+        importance: "number",
+        difficulty: "number",
+        start: "date",
+        edit: "date",
+        end: "date",
+        created: "date"
+    }
+    let formatted = formatObject(first, hourglass)
+    console.log(formatted)
+```
 <a name="getType"></a>
 
 ## getType(data) ⇒ <code>string</code>
@@ -208,15 +268,3 @@ formatBoolean(data)
 ```js
 getType(data)
 ```
-<a name="format"></a>
-
-## format(data, date,) ⇒ <code>any</code>
-format(data, type)
-
-**Kind**: global function  
-**Date**: 2022-03-03  
-
-| Param | Type                | Description                              |
-|-------|---------------------|------------------------------------------|
-| data  | <code>any</code>    |                                          |
-| date, | <code>string</code> | string, array, object, boolean or number |

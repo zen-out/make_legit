@@ -35,3 +35,31 @@ console.log("🚀 ~ file: playground.js ~ line 19 ~ getDate2", getDate2)
 console.log(getDate)
 
 console.log(make_legit.format("Dec 11, 1994", "date"))
+let first = {
+    "public": true,
+    "seconds": 92,
+    "status": "to do",
+    "importance": 2,
+    "usefulness": 1,
+    "difficulty": 1,
+    "user_id": 4,
+    "id": 1
+}
+
+let hourglass = {
+    id: "number",
+    user_id: "number",
+    email: "string",
+    seconds: "number",
+    public: "boolean",
+    status: "string",
+    usefulness: "number",
+    importance: "number",
+    difficulty: "number",
+    start: "date",
+    edit: "date",
+    end: "date",
+    created: "date"
+}
+let result = make_legit.formatActualObject(first, hourglass)
+console.log(result)
