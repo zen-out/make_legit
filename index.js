@@ -1,4 +1,4 @@
-! function(t, e) { "object" == typeof exports && "object" == typeof module ? module.exports = e(require("when_you_free")) : "function" == typeof define && define.amd ? define(["when_you_free"], e) : "object" == typeof exports ? exports.make_legit = e(require("when_you_free")) : t.make_legit = e(t.when_you_free) }(this, (function(t) { return (() => { var e = { 923: function(t, e, n) { var r;! function(o) { "use strict"; var u, i, a, c, f, l, s, y, p, b, v, h, d, g, m, _, j;
+! function(t, e) { "object" == typeof exports && "object" == typeof module ? module.exports = e(require("when_you_free")) : "function" == typeof define && define.amd ? define(["when_you_free"], e) : "object" == typeof exports ? exports.make_legit = e(require("when_you_free")) : t.make_legit = e(t.when_you_free) }(this, (function(t) { return (() => { var e = { 923: function(t, e, n) { var r;! function(o) { "use strict"; var u, i, a, c, f, l, s, y, p, b, v, h, d, g, m, j, _;
 
                         function O(t) { return null != t }
 
@@ -30,10 +30,10 @@
 
                         function M(t) { return m ? O(t) && q(t[Symbol.iterator]) : F(t) }
 
-                        function V(t, e) { var n, r; if (!O(t)) return !1; if (j && $(t, Set)) return t.has(e); if (E(t)) return -1 !== t.indexOf(e); if (m && t[Symbol.iterator] && q(t.values)) { n = t.values();
+                        function V(t, e) { var n, r; if (!O(t)) return !1; if (_ && $(t, Set)) return t.has(e); if (E(t)) return -1 !== t.indexOf(e); if (m && t[Symbol.iterator] && q(t.values)) { n = t.values();
                                 do { if ((r = n.next()).value === e) return !0 } while (!r.done); return !1 } return P(t, (function(t, n) { return n === e })) }
 
-                        function D(t, e) { return !!O(t) && (_ && $(t, Map) ? t.has(e) : !(M(t) && !w(+e) || !t[e])) }
+                        function D(t, e) { return !!O(t) && (j && $(t, Map) ? t.has(e) : !(M(t) && !w(+e) || !t[e])) }
 
                         function q(t) { return "function" == typeof t }
 
@@ -52,13 +52,13 @@
                         function R(t, e) { return function() { var n = arguments,
                                     r = t.l || t.length,
                                     o = n[r],
-                                    u = n[r + 1]; return J(t.apply(null, n), I(o) ? o : e.replace("{a}", U(n[0])).replace("{e}", U(n[1])).replace("{e2}", U(n[2])).replace("{t}", (function() { var t = n[1]; return t && t.name ? t.name : t })), q(u) ? u : TypeError), n[0] } }
+                                    u = n[r + 1]; return W(t.apply(null, n), I(o) ? o : e.replace("{a}", U(n[0])).replace("{e}", U(n[1])).replace("{e2}", U(n[2])).replace("{t}", (function() { var t = n[1]; return t && t.name ? t.name : t })), q(u) ? u : TypeError), n[0] } }
 
                         function U(t) { return function() { return E(t) ? '"' + t.replace(/\\/g, "\\\\").replace(/"/g, '\\"') + '"' : t && !0 !== t && t.constructor && !$(t, RegExp) && "number" != typeof t ? t.constructor.name : t } }
 
-                        function J(t, e, n) { if (t) return t; throw new(n || Error)(e || "assert failed") }
+                        function W(t, e, n) { if (t) return t; throw new(n || Error)(e || "assert failed") }
 
-                        function W(t) { var e = function() { return G(t.apply(null, arguments)) }; return e.l = t.length, e }
+                        function J(t) { var e = function() { return G(t.apply(null, arguments)) }; return e.l = t.length, e }
 
                         function G(t) { return !t }
 
@@ -91,7 +91,7 @@
                                     return !0 }, s: "be like {e}" }, { n: "array", f: function(t) { return h(t) }, s: "be Array" }, { n: "emptyArray", f: function(t) { return h(t) && 0 === t.length }, s: "be empty array" }, { n: "nonEmptyArray", f: function(t) { return h(t) && t.length > 0 }, s: "be non-empty array" }, { n: "arrayLike", f: F, s: "be array-like" }, { n: "iterable", f: M, s: "be iterable" }, { n: "date", f: function(t) { return $(t, Date) && S(t.getTime()) }, s: "be valid Date" }, { n: "function", f: q, s: "be Function" }, { n: "hasLength", f: function(t, e) { return O(t) && t.length === e }, s: "have length {e}" }, { n: "throws", f: function(t) { if (!q(t)) return !1; try { t() } catch (t) { return !0 } return !1 }, s: "throw" }].map((function(t) { var e = t.n;
                                 u[e] = "assert failed: expected {a} to " + t.s, i[e] = t.f })), a = { map: function t(e, n) { var r; if (r = h(e) ? [] : {}, q(n)) z(e, (function(t, e) { r[t] = n(e) }));
                                     else { h(n) || c.object(n); var o = b(e || {});
-                                        z(n, (function(n, u) { o.some((function(t, e) { return t === n && (o.splice(e, 1), !0) })), q(u) ? f.assigned(e) ? r[n] = !!u.m : r[n] = u(e[n]) : r[n] = t(e[n], u) })) } return r }, all: function(t) { return h(t) ? B(t, !1) : (c.object(t), C(t, !1)) }, any: function(t) { return h(t) ? B(t, !0) : (c.object(t), C(t, !0)) } }, s = ["array", "arrayLike", "iterable", "object"], y = Object.prototype.hasOwnProperty, p = Object.prototype.toString, b = Object.keys, v = Array.prototype.slice, h = Array.isArray, d = Number.NEGATIVE_INFINITY, g = Number.POSITIVE_INFINITY, m = "function" == typeof Symbol, _ = "function" == typeof Map, j = "function" == typeof Set, a = L(a, i), c = H(R, J), f = H(W, G), l = H((function(t) { var e = function() { return !!f.assigned(arguments[0]) || t.apply(null, arguments) }; return e.l = t.length, e.m = !0, e }), (function(t) { return !1 === O(t) || t })), c.not = X(R, f, "not "), c.maybe = X(R, l, "maybe "), s.forEach((function(t) { i[t].of = Q([K.bind(null, null), i[t], i, {}, ""]) })), Z(c, R), Z(f, W), s.forEach((function(t) { l[t].of = Q([K.bind(null, "maybe"), i[t], i, {}, ""]), c.maybe[t].of = X(R, l[t].of), c.not[t].of = X(R, f[t].of) })),
+                                        z(n, (function(n, u) { o.some((function(t, e) { return t === n && (o.splice(e, 1), !0) })), q(u) ? f.assigned(e) ? r[n] = !!u.m : r[n] = u(e[n]) : r[n] = t(e[n], u) })) } return r }, all: function(t) { return h(t) ? B(t, !1) : (c.object(t), C(t, !1)) }, any: function(t) { return h(t) ? B(t, !0) : (c.object(t), C(t, !0)) } }, s = ["array", "arrayLike", "iterable", "object"], y = Object.prototype.hasOwnProperty, p = Object.prototype.toString, b = Object.keys, v = Array.prototype.slice, h = Array.isArray, d = Number.NEGATIVE_INFINITY, g = Number.POSITIVE_INFINITY, m = "function" == typeof Symbol, j = "function" == typeof Map, _ = "function" == typeof Set, a = L(a, i), c = H(R, W), f = H(J, G), l = H((function(t) { var e = function() { return !!f.assigned(arguments[0]) || t.apply(null, arguments) }; return e.l = t.length, e.m = !0, e }), (function(t) { return !1 === O(t) || t })), c.not = X(R, f, "not "), c.maybe = X(R, l, "maybe "), s.forEach((function(t) { i[t].of = Q([K.bind(null, null), i[t], i, {}, ""]) })), Z(c, R), Z(f, J), s.forEach((function(t) { l[t].of = Q([K.bind(null, "maybe"), i[t], i, {}, ""]), c.maybe[t].of = X(R, l[t].of), c.not[t].of = X(R, f[t].of) })),
                             function(o) { void 0 === (r = function() { return o }.call(e, n, e, t)) || (t.exports = r) }(L(a, { assert: c, not: f, maybe: l })) }() }, 826: (t, e, n) => { const r = n(245),
                         o = n(146),
                         u = n(684);
@@ -109,8 +109,8 @@
                         d = h && h.exports === v,
                         g = Function.prototype,
                         m = Object.prototype,
-                        _ = b["__core-js_shared__"],
-                        j = (r = /[^.]+$/.exec(_ && _.keys && _.keys.IE_PROTO || "")) ? "Symbol(src)_1." + r : "",
+                        j = b["__core-js_shared__"],
+                        _ = (r = /[^.]+$/.exec(j && j.keys && j.keys.IE_PROTO || "")) ? "Symbol(src)_1." + r : "",
                         O = g.toString,
                         w = m.hasOwnProperty,
                         S = m.toString,
@@ -131,7 +131,7 @@
                         z = R($),
                         B = R(F);
 
-                    function C(t, e) { var n = function(t, e) { return null == t ? void 0 : t[e] }(t, e); return function(t) { if (!K(t) || function(t) { return !!j && j in t }(t)) return !1; var e = G(t) || function(t) { var e = !1; if (null != t && "function" != typeof t.toString) try { e = !!(t + "") } catch (t) {}
+                    function C(t, e) { var n = function(t, e) { return null == t ? void 0 : t[e] }(t, e); return function(t) { if (!K(t) || function(t) { return !!_ && _ in t }(t)) return !1; var e = G(t) || function(t) { var e = !1; if (null != t && "function" != typeof t.toString) try { e = !!(t + "") } catch (t) {}
                                 return e }(t) ? A : s; return e.test(R(t)) }(n) ? n : void 0 } var L = function(t) { return S.call(t) };
 
                     function R(t) { if (null != t) { try { return O.call(t) } catch (t) {} try { return t + "" } catch (t) {} } return "" }(I && L(new I(new ArrayBuffer(1))) != l || N && L(new N) != i || P && L(P.resolve()) != a || $ && L(new $) != c || F && L(new F) != f) && (L = function(t) { var e = S.call(t),
@@ -149,12 +149,12 @@
                                 return f }
                         return e }); var U = Array.isArray;
 
-                    function J(t) { return null != t && function(t) { return "number" == typeof t && t > -1 && t % 1 == 0 && t <= 9007199254740991 }(t.length) && !G(t) } var W = T || function() { return !1 };
+                    function W(t) { return null != t && function(t) { return "number" == typeof t && t > -1 && t % 1 == 0 && t <= 9007199254740991 }(t.length) && !G(t) } var J = T || function() { return !1 };
 
                     function G(t) { var e = K(t) ? S.call(t) : ""; return "[object Function]" == e || "[object GeneratorFunction]" == e }
 
                     function K(t) { var e = typeof t; return !!t && ("object" == e || "function" == e) }
-                    t.exports = function(t) { if (J(t) && (U(t) || "string" == typeof t || "function" == typeof t.splice || W(t) || function(t) { return function(t) { return function(t) { return !!t && "object" == typeof t }(t) && J(t) }(t) && w.call(t, "callee") && (!x.call(t, "callee") || "[object Arguments]" == S.call(t)) }(t))) return !t.length; var e = L(t); if (e == i || e == c) return !t.size; if (M || function(t) { var e = t && t.constructor; return t === ("function" == typeof e && e.prototype || m) }(t)) return !E(t).length; for (var n in t)
+                    t.exports = function(t) { if (W(t) && (U(t) || "string" == typeof t || "function" == typeof t.splice || J(t) || function(t) { return function(t) { return function(t) { return !!t && "object" == typeof t }(t) && W(t) }(t) && w.call(t, "callee") && (!x.call(t, "callee") || "[object Arguments]" == S.call(t)) }(t))) return !t.length; var e = L(t); if (e == i || e == c) return !t.size; if (M || function(t) { var e = t && t.constructor; return t === ("function" == typeof e && e.prototype || m) }(t)) return !E(t).length; for (var n in t)
                             if (w.call(t, n)) return !1;
                         return !0 } }, 146: t => { var e, n, r = Function.prototype,
                         o = Object.prototype,
@@ -181,8 +181,8 @@
                         d = "[object String]",
                         g = "[object Symbol]",
                         m = "[object WeakMap]",
-                        _ = "[object ArrayBuffer]",
-                        j = "[object DataView]",
+                        j = "[object ArrayBuffer]",
+                        _ = "[object DataView]",
                         O = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
                         w = /^\w*$/,
                         S = /^\./,
@@ -191,7 +191,7 @@
                         x = /^\[object .+?Constructor\]$/,
                         T = /^(?:0|[1-9]\d*)$/,
                         E = {};
-                    E["[object Float32Array]"] = E["[object Float64Array]"] = E["[object Int8Array]"] = E["[object Int16Array]"] = E["[object Int32Array]"] = E["[object Uint8Array]"] = E["[object Uint8ClampedArray]"] = E["[object Uint16Array]"] = E["[object Uint32Array]"] = !0, E[u] = E[i] = E[_] = E[a] = E[j] = E[c] = E[f] = E[l] = E[s] = E[y] = E[p] = E[v] = E[h] = E[d] = E[m] = !1; var I = "object" == typeof n.g && n.g && n.g.Object === Object && n.g,
+                    E["[object Float32Array]"] = E["[object Float64Array]"] = E["[object Int8Array]"] = E["[object Int16Array]"] = E["[object Int32Array]"] = E["[object Uint8Array]"] = E["[object Uint8ClampedArray]"] = E["[object Uint16Array]"] = E["[object Uint32Array]"] = !0, E[u] = E[i] = E[j] = E[a] = E[_] = E[c] = E[f] = E[l] = E[s] = E[y] = E[p] = E[v] = E[h] = E[d] = E[m] = !1; var I = "object" == typeof n.g && n.g && n.g.Object === Object && n.g,
                         N = "object" == typeof self && self && self.Object === Object && self,
                         P = I || N || Function("return this")(),
                         $ = e && !e.nodeType && e,
@@ -215,12 +215,12 @@
                     function L(t, e) { return function(n) { return t(e(n)) } }
 
                     function R(t) { var e = -1,
-                            n = Array(t.size); return t.forEach((function(t) { n[++e] = t })), n } var U, J = Array.prototype,
-                        W = Function.prototype,
+                            n = Array(t.size); return t.forEach((function(t) { n[++e] = t })), n } var U, W = Array.prototype,
+                        J = Function.prototype,
                         G = Object.prototype,
                         K = P["__core-js_shared__"],
                         Y = (U = /[^.]+$/.exec(K && K.keys && K.keys.IE_PROTO || "")) ? "Symbol(src)_1." + U : "",
-                        H = W.toString,
+                        H = J.toString,
                         Q = G.hasOwnProperty,
                         X = G.toString,
                         Z = RegExp("^" + H.call(Q).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
@@ -229,7 +229,7 @@
                         nt = L(Object.getPrototypeOf, Object),
                         rt = Object.create,
                         ot = G.propertyIsEnumerable,
-                        ut = J.splice,
+                        ut = W.splice,
                         it = L(Object.keys, Object),
                         at = Ft(P, "DataView"),
                         ct = Ft(P, "Map"),
@@ -244,9 +244,9 @@
                         dt = Lt(st),
                         gt = tt ? tt.prototype : void 0,
                         mt = gt ? gt.valueOf : void 0,
-                        _t = gt ? gt.toString : void 0;
+                        jt = gt ? gt.toString : void 0;
 
-                    function jt(t) { var e = -1,
+                    function _t(t) { var e = -1,
                             n = t ? t.length : 0; for (this.clear(); ++e < n;) { var r = t[e];
                             this.set(r[0], r[1]) } }
 
@@ -266,10 +266,10 @@
                     function kt(t, e) { for (var n = t.length; n--;)
                             if (Ut(t[n][0], e)) return n;
                         return -1 }
-                    jt.prototype.clear = function() { this.__data__ = yt ? yt(null) : {} }, jt.prototype.delete = function(t) { return this.has(t) && delete this.__data__[t] }, jt.prototype.get = function(t) { var e = this.__data__; if (yt) { var n = e[t]; return n === r ? void 0 : n } return Q.call(e, t) ? e[t] : void 0 }, jt.prototype.has = function(t) { var e = this.__data__; return yt ? void 0 !== e[t] : Q.call(e, t) }, jt.prototype.set = function(t, e) { return this.__data__[t] = yt && void 0 === e ? r : e, this }, Ot.prototype.clear = function() { this.__data__ = [] }, Ot.prototype.delete = function(t) { var e = this.__data__,
+                    _t.prototype.clear = function() { this.__data__ = yt ? yt(null) : {} }, _t.prototype.delete = function(t) { return this.has(t) && delete this.__data__[t] }, _t.prototype.get = function(t) { var e = this.__data__; if (yt) { var n = e[t]; return n === r ? void 0 : n } return Q.call(e, t) ? e[t] : void 0 }, _t.prototype.has = function(t) { var e = this.__data__; return yt ? void 0 !== e[t] : Q.call(e, t) }, _t.prototype.set = function(t, e) { return this.__data__[t] = yt && void 0 === e ? r : e, this }, Ot.prototype.clear = function() { this.__data__ = [] }, Ot.prototype.delete = function(t) { var e = this.__data__,
                             n = kt(e, t); return !(n < 0 || (n == e.length - 1 ? e.pop() : ut.call(e, n, 1), 0)) }, Ot.prototype.get = function(t) { var e = this.__data__,
                             n = kt(e, t); return n < 0 ? void 0 : e[n][1] }, Ot.prototype.has = function(t) { return kt(this.__data__, t) > -1 }, Ot.prototype.set = function(t, e) { var n = this.__data__,
-                            r = kt(n, t); return r < 0 ? n.push([t, e]) : n[r][1] = e, this }, wt.prototype.clear = function() { this.__data__ = { hash: new jt, map: new(ct || Ot), string: new jt } }, wt.prototype.delete = function(t) { return $t(this, t).delete(t) }, wt.prototype.get = function(t) { return $t(this, t).get(t) }, wt.prototype.has = function(t) { return $t(this, t).has(t) }, wt.prototype.set = function(t, e) { return $t(this, t).set(t, e), this }, St.prototype.add = St.prototype.push = function(t) { return this.__data__.set(t, r), this }, St.prototype.has = function(t) { return this.__data__.has(t) }, At.prototype.clear = function() { this.__data__ = new Ot }, At.prototype.delete = function(t) { return this.__data__.delete(t) }, At.prototype.get = function(t) { return this.__data__.get(t) }, At.prototype.has = function(t) { return this.__data__.has(t) }, At.prototype.set = function(t, e) { var n = this.__data__; if (n instanceof Ot) { var r = n.__data__; if (!ct || r.length < 199) return r.push([t, e]), this;
+                            r = kt(n, t); return r < 0 ? n.push([t, e]) : n[r][1] = e, this }, wt.prototype.clear = function() { this.__data__ = { hash: new _t, map: new(ct || Ot), string: new _t } }, wt.prototype.delete = function(t) { return $t(this, t).delete(t) }, wt.prototype.get = function(t) { return $t(this, t).get(t) }, wt.prototype.has = function(t) { return $t(this, t).has(t) }, wt.prototype.set = function(t, e) { return $t(this, t).set(t, e), this }, St.prototype.add = St.prototype.push = function(t) { return this.__data__.set(t, r), this }, St.prototype.has = function(t) { return this.__data__.has(t) }, At.prototype.clear = function() { this.__data__ = new Ot }, At.prototype.delete = function(t) { return this.__data__.delete(t) }, At.prototype.get = function(t) { return this.__data__.get(t) }, At.prototype.has = function(t) { return this.__data__.has(t) }, At.prototype.set = function(t, e) { var n = this.__data__; if (n instanceof Ot) { var r = n.__data__; if (!ct || r.length < 199) return r.push([t, e]), this;
                             n = this.__data__ = new wt(r) } return n.set(t, e), this };
 
                     function xt(t, e) { return t && function(t, e, n) { for (var r = -1, o = Object(t), u = n(t), i = u.length; i--;) { var a = u[++r]; if (!1 === e(o[a], a, o)) break } return t }(t, e, ee) }
@@ -278,17 +278,17 @@
 
                     function Et(t, e) { return null != t && e in Object(t) }
 
-                    function It(t, e, n, r, o) { return t === e || (null == t || null == e || !Ht(t) && !Qt(e) ? t != t && e != e : function(t, e, n, r, o, l) { var b = Wt(t),
-                                m = Wt(e),
+                    function It(t, e, n, r, o) { return t === e || (null == t || null == e || !Ht(t) && !Qt(e) ? t != t && e != e : function(t, e, n, r, o, l) { var b = Jt(t),
+                                m = Jt(e),
                                 O = i,
                                 w = i;
                             b || (O = (O = Mt(t)) == u ? p : O), m || (w = (w = Mt(e)) == u ? p : w); var S = O == p && !B(t),
                                 A = w == p && !B(e),
                                 k = O == w; if (k && !S) return l || (l = new At), b || te(t) ? Pt(t, e, n, r, o, l) : function(t, e, n, r, o, u, i) { switch (n) {
-                                    case j:
+                                    case _:
                                         if (t.byteLength != e.byteLength || t.byteOffset != e.byteOffset) return !1;
                                         t = t.buffer, e = e.buffer;
-                                    case _:
+                                    case j:
                                         return !(t.byteLength != e.byteLength || !r(new et(t), new et(e)));
                                     case a:
                                     case c:
@@ -316,7 +316,7 @@
                                         g = e.constructor;
                                     d == g || !("constructor" in t) || !("constructor" in e) || "function" == typeof d && d instanceof d && "function" == typeof g && g instanceof g || (y = !1) } return u.delete(t), u.delete(e), y }(t, e, n, r, o, l)) }(t, e, It, n, r, o)) }
 
-                    function Nt(t) { return Wt(t) ? t : Bt(t) }
+                    function Nt(t) { return Jt(t) ? t : Bt(t) }
 
                     function Pt(t, e, n, r, o, u) { var i = 2 & o,
                             a = t.length,
@@ -332,15 +332,15 @@
 
                     function Vt(t, e) { return !!(e = null == e ? o : e) && ("number" == typeof t || T.test(t)) && t > -1 && t % 1 == 0 && t < e }
 
-                    function Dt(t, e) { if (Wt(t)) return !1; var n = typeof t; return !("number" != n && "symbol" != n && "boolean" != n && null != t && !Xt(t)) || w.test(t) || !O.test(t) || null != e && t in Object(e) }
+                    function Dt(t, e) { if (Jt(t)) return !1; var n = typeof t; return !("number" != n && "symbol" != n && "boolean" != n && null != t && !Xt(t)) || w.test(t) || !O.test(t) || null != e && t in Object(e) }
 
                     function qt(t) { return t == t && !Ht(t) }
 
-                    function zt(t, e) { return function(n) { return null != n && n[t] === e && (void 0 !== e || t in Object(n)) } }(at && Mt(new at(new ArrayBuffer(1))) != j || ct && Mt(new ct) != s || ft && Mt(ft.resolve()) != b || lt && Mt(new lt) != h || st && Mt(new st) != m) && (Mt = function(t) { var e = X.call(t),
+                    function zt(t, e) { return function(n) { return null != n && n[t] === e && (void 0 !== e || t in Object(n)) } }(at && Mt(new at(new ArrayBuffer(1))) != _ || ct && Mt(new ct) != s || ft && Mt(ft.resolve()) != b || lt && Mt(new lt) != h || st && Mt(new st) != m) && (Mt = function(t) { var e = X.call(t),
                             n = e == p ? t.constructor : void 0,
                             r = n ? Lt(n) : void 0; if (r) switch (r) {
                             case pt:
-                                return j;
+                                return _;
                             case bt:
                                 return s;
                             case vt:
@@ -350,7 +350,7 @@
                             case dt:
                                 return m }
                         return e }); var Bt = Rt((function(t) { var e;
-                        t = null == (e = t) ? "" : function(t) { if ("string" == typeof t) return t; if (Xt(t)) return _t ? _t.call(t) : ""; var e = t + ""; return "0" == e && 1 / t == -1 / 0 ? "-0" : e }(e); var n = []; return S.test(t) && n.push(""), t.replace(A, (function(t, e, r, o) { n.push(r ? o.replace(k, "$1") : e || t) })), n }));
+                        t = null == (e = t) ? "" : function(t) { if ("string" == typeof t) return t; if (Xt(t)) return jt ? jt.call(t) : ""; var e = t + ""; return "0" == e && 1 / t == -1 / 0 ? "-0" : e }(e); var n = []; return S.test(t) && n.push(""), t.replace(A, (function(t, e, r, o) { n.push(r ? o.replace(k, "$1") : e || t) })), n }));
 
                     function Ct(t) { if ("string" == typeof t || Xt(t)) return t; var e = t + ""; return "0" == e && 1 / t == -1 / 0 ? "-0" : e }
 
@@ -362,8 +362,8 @@
 
                     function Ut(t, e) { return t === e || t != t && e != e }
 
-                    function Jt(t) { return function(t) { return Qt(t) && Gt(t) }(t) && Q.call(t, "callee") && (!ot.call(t, "callee") || X.call(t) == u) }
-                    Rt.Cache = wt; var Wt = Array.isArray;
+                    function Wt(t) { return function(t) { return Qt(t) && Gt(t) }(t) && Q.call(t, "callee") && (!ot.call(t, "callee") || X.call(t) == u) }
+                    Rt.Cache = wt; var Jt = Array.isArray;
 
                     function Gt(t) { return null != t && Yt(t.length) && !Kt(t) }
 
@@ -377,27 +377,27 @@
 
                     function Xt(t) { return "symbol" == typeof t || Qt(t) && X.call(t) == g } var Zt, te = D ? (Zt = D, function(t) { return Zt(t) }) : function(t) { return Qt(t) && Yt(t.length) && !!E[X.call(t)] };
 
-                    function ee(t) { return Gt(t) ? function(t, e) { var n = Wt(t) || Jt(t) ? function(t, e) { for (var n = -1, r = Array(t); ++n < t;) r[n] = e(n); return r }(t.length, String) : [],
+                    function ee(t) { return Gt(t) ? function(t, e) { var n = Jt(t) || Wt(t) ? function(t, e) { for (var n = -1, r = Array(t); ++n < t;) r[n] = e(n); return r }(t.length, String) : [],
                                 r = n.length,
                                 o = !!r; for (var u in t) !e && !Q.call(t, u) || o && ("length" == u || Vt(u, r)) || n.push(u); return n }(t) : function(t) { if (n = (e = t) && e.constructor, e !== ("function" == typeof n && n.prototype || G)) return it(t); var e, n, r = []; for (var o in Object(t)) Q.call(t, o) && "constructor" != o && r.push(o); return r }(t) }
 
                     function ne(t) { return t }
-                    t.exports = function(t, e, n) { var r, o, u, i, a, c, f = Wt(t) || te(t); if (e = "function" == typeof(o = e) ? o : null == o ? ne : "object" == typeof o ? Wt(o) ? function(t, e) { return Dt(t) && qt(e) ? zt(Ct(t), e) : function(n) { var r = function(t, e, n) { var r = null == t ? void 0 : Tt(t, e); return void 0 === r ? void 0 : r }(n, t); return void 0 === r && r === e ? function(t, e) { return null != t && function(t, e, n) { for (var r, o = -1, u = (e = Dt(e, t) ? [e] : Nt(e)).length; ++o < u;) { var i = Ct(e[o]); if (!(r = null != t && n(t, i))) break;
-                                                t = t[i] } return r || !!(u = t ? t.length : 0) && Yt(u) && Vt(i, u) && (Wt(t) || Jt(t)) }(t, e, Et) }(n, t) : It(e, r, void 0, 3) } }(o[0], o[1]) : (i = function(t) { for (var e = ee(t), n = e.length; n--;) { var r = e[n],
+                    t.exports = function(t, e, n) { var r, o, u, i, a, c, f = Jt(t) || te(t); if (e = "function" == typeof(o = e) ? o : null == o ? ne : "object" == typeof o ? Jt(o) ? function(t, e) { return Dt(t) && qt(e) ? zt(Ct(t), e) : function(n) { var r = function(t, e, n) { var r = null == t ? void 0 : Tt(t, e); return void 0 === r ? void 0 : r }(n, t); return void 0 === r && r === e ? function(t, e) { return null != t && function(t, e, n) { for (var r, o = -1, u = (e = Dt(e, t) ? [e] : Nt(e)).length; ++o < u;) { var i = Ct(e[o]); if (!(r = null != t && n(t, i))) break;
+                                                t = t[i] } return r || !!(u = t ? t.length : 0) && Yt(u) && Vt(i, u) && (Jt(t) || Wt(t)) }(t, e, Et) }(n, t) : It(e, r, void 0, 3) } }(o[0], o[1]) : (i = function(t) { for (var e = ee(t), n = e.length; n--;) { var r = e[n],
                                         o = t[r];
                                     e[n] = [r, o, qt(o)] } return e }(u = o), 1 == i.length && i[0][2] ? zt(i[0][0], i[0][1]) : function(t) { return t === u || function(t, e, n, r) { var o = n.length,
                                         u = o; if (null == t) return !u; for (t = Object(t); o--;) { var i = n[o]; if (i[2] ? i[1] !== t[i[0]] : !(i[0] in t)) return !1 } for (; ++o < u;) { var a = (i = n[o])[0],
                                             c = t[a],
                                             f = i[1]; if (i[2]) { if (void 0 === c && !(a in t)) return !1 } else { var l, s = new At; if (!(void 0 === l ? It(f, c, r, 3, s) : l)) return !1 } } return !0 }(t, 0, i) }) : Dt(a = o) ? (c = Ct(a), function(t) { return null == t ? void 0 : t[c] }) : function(t) { return function(e) { return Tt(e, t) } }(a), null == n)
                             if (f || Ht(t)) { var l = t.constructor;
-                                n = f ? Wt(t) ? new l : [] : Kt(l) && Ht(r = nt(t)) ? rt(r) : {} } else n = {};
+                                n = f ? Jt(t) ? new l : [] : Kt(l) && Ht(r = nt(t)) ? rt(r) : {} } else n = {};
                         return (f ? q : xt)(t, (function(t, r, o) { return e(n, t, r, o) })), n } }, 529: e => { "use strict";
                     e.exports = t } },
             n = {};
 
         function r(t) { var o = n[t]; if (void 0 !== o) return o.exports; var u = n[t] = { id: t, loaded: !1, exports: {} }; return e[t].call(u.exports, u, u.exports, r), u.loaded = !0, u.exports }
         r.n = t => { var e = t && t.__esModule ? () => t.default : () => t; return r.d(e, { a: e }), e }, r.d = (t, e) => { for (var n in e) r.o(e, n) && !r.o(t, n) && Object.defineProperty(t, n, { enumerable: !0, get: e[n] }) }, r.g = function() { if ("object" == typeof globalThis) return globalThis; try { return this || new Function("return this")() } catch (t) { if ("object" == typeof window) return window } }(), r.o = (t, e) => Object.prototype.hasOwnProperty.call(t, e), r.r = t => { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(t, "__esModule", { value: !0 }) }, r.nmd = t => (t.paths = [], t.children || (t.children = []), t); var o = {}; return (() => { "use strict";
-            r.r(o), r.d(o, { clean: () => p, format: () => j, formatActualObject: () => w, formatArray: () => d, formatBoolean: () => _, formatDate: () => v, formatNumber: () => h, formatObject: () => g, formatString: () => m, getType: () => f, testFormatObject: () => S, trimArr: () => y, trimObj: () => s }); var t = r(826),
+            r.r(o), r.d(o, { clean: () => p, format: () => x, formatActualObject: () => T, formatArray: () => d, formatBoolean: () => j, formatDate: () => v, formatNumber: () => h, formatObject: () => g, formatString: () => m, getObject: () => O, getType: () => f, mergeWithOriginal: () => A, testFormatObject: () => E, testMergeWithOriginal: () => k, trimArr: () => y, trimObj: () => s }); var t = r(826),
                 e = r.n(t);
 
             function n(t) { return n = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t) { return typeof t } : function(t) { return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t }, n(t) }
@@ -462,23 +462,35 @@
                 else { if ("date" === n) return (0, c.getType)(t);
                     e = "boolean" === n ? t.toString() : void 0 } return "string" == typeof e ? e : void 0 }
 
-            function _(t) { var e; if ("string" === f(t)) { var n = t.toLowerCase(); return "true" === n ? e = !0 : "false" === n && (e = !1), "boolean" == typeof e ? e : void 0 } }
+            function j(t) { var e; if ("string" === f(t)) { var n = t.toLowerCase(); return "true" === n ? e = !0 : "false" === n && (e = !1), "boolean" == typeof e ? e : void 0 } }
 
-            function j(t, e) { return f(t) === e ? p(t) : "date" === e ? v(t) : "string" === e ? m(t) : "array" === e ? p(d(t)) : "object" === e ? p(g(t)) : "boolean" === e ? _(t) : "number" === e ? h(t) : u("not a valid type " + f, "getType in make legit", "should be a valid type") }
+            function _(t) { return _ = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t) { return typeof t } : function(t) { return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t }, _(t) }
 
-            function O(t, e) {
+            function O(t) { if (Array.isArray(t) && t.length > 0) { var e = t[0]; return "object" === _(e) ? e : {} } if ("object" === _(t)) return t }
+
+            function w(t, e) {
                 (null == e || e > t.length) && (e = t.length); for (var n = 0, r = new Array(e); n < e; n++) r[n] = t[n]; return r }
 
-            function w(t, e) { for (var n = {}, r = function(t, e) { var n, r, o = new Set(t),
-                            u = new Set(e),
-                            i = [];
-                        o.size > u.size ? (n = o, r = u) : (n = u, r = o); var a, c = function(t, e) { var n = "undefined" != typeof Symbol && t[Symbol.iterator] || t["@@iterator"]; if (!n) { if (Array.isArray(t) || (n = function(t, e) { if (t) { if ("string" == typeof t) return O(t, e); var n = Object.prototype.toString.call(t).slice(8, -1); return "Object" === n && t.constructor && (n = t.constructor.name), "Map" === n || "Set" === n ? Array.from(t) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? O(t, e) : void 0 } }(t)) || e && t && "number" == typeof t.length) { n && (t = n); var r = 0,
-                                        o = function() {}; return { s: o, n: function() { return r >= t.length ? { done: !0 } : { done: !1, value: t[r++] } }, e: function(t) { throw t }, f: o } } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.") } var u, i = !0,
-                                a = !1; return { s: function() { n = n.call(t) }, n: function() { var t = n.next(); return i = t.done, t }, e: function(t) { a = !0, u = t }, f: function() { try { i || null == n.return || n.return() } finally { if (a) throw u } } } }(n); try { for (c.s(); !(a = c.n()).done;) { var f = a.value;
-                                r.has(f) && i.push(f) } } catch (t) { c.e(t) } finally { c.f() } return i }(Object.keys(e), Object.keys(t)), o = 0; o < r.length; o++) { var u = r[o],
+            function S(t, e) { var n, r, o = new Set(t),
+                    u = new Set(e),
+                    i = [];
+                o.size > u.size ? (n = o, r = u) : (n = u, r = o); var a, c = function(t, e) { var n = "undefined" != typeof Symbol && t[Symbol.iterator] || t["@@iterator"]; if (!n) { if (Array.isArray(t) || (n = function(t, e) { if (t) { if ("string" == typeof t) return w(t, e); var n = Object.prototype.toString.call(t).slice(8, -1); return "Object" === n && t.constructor && (n = t.constructor.name), "Map" === n || "Set" === n ? Array.from(t) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? w(t, e) : void 0 } }(t)) || e && t && "number" == typeof t.length) { n && (t = n); var r = 0,
+                                o = function() {}; return { s: o, n: function() { return r >= t.length ? { done: !0 } : { done: !1, value: t[r++] } }, e: function(t) { throw t }, f: o } } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.") } var u, i = !0,
+                        a = !1; return { s: function() { n = n.call(t) }, n: function() { var t = n.next(); return i = t.done, t }, e: function(t) { a = !0, u = t }, f: function() { try { i || null == n.return || n.return() } finally { if (a) throw u } } } }(n); try { for (c.s(); !(a = c.n()).done;) { var f = a.value;
+                        r.has(f) && i.push(f) } } catch (t) { c.e(t) } finally { c.f() } return i }
+
+            function A(t, e) { for (var n = {}, r = S(Object.keys(t), Object.keys(e)), o = 0; o < r.length; o++) { var u = r[o];
+                    e.hasOwnProperty(u) ? n[u] = e[u] : n[u] = t[u] } return n }
+
+            function k() { var t = A({ id: 1, whatsup: "nothing" }, { id: 2, whatsup: "im pissed" });
+                console.log("🚀 ~ file: mergeObject.js ~ line 44 ~ test ~ merged", t) }
+
+            function x(t, e) { return f(t) === e ? p(t) : "date" === e ? v(t) : "string" === e ? m(t) : "array" === e ? p(d(t)) : "object" === e ? p(g(t)) : "boolean" === e ? j(t) : "number" === e ? h(t) : u("not a valid type " + f, "getType in make legit", "should be a valid type") }
+
+            function T(t, e) { for (var n = {}, r = S(Object.keys(e), Object.keys(t)), o = 0; o < r.length; o++) { var u = r[o],
                         i = e[u],
                         a = t[u];
-                    n[u] = j(a, i) } return n }
+                    n[u] = x(a, i) } return n }
 
-            function S() { var t = w({ public: !0, seconds: 92, status: "to do", importance: 2, usefulness: 1, difficulty: 1, user_id: 4, id: 1 }, { id: "number", user_id: "number", email: "string", seconds: "number", public: "boolean", status: "string", usefulness: "number", importance: "number", difficulty: "number", start: "date", edit: "date", end: "date", created: "date" });
+            function E() { var t = T({ public: !0, seconds: 92, status: "to do", importance: 2, usefulness: 1, difficulty: 1, user_id: 4, id: 1 }, { id: "number", user_id: "number", email: "string", seconds: "number", public: "boolean", status: "string", usefulness: "number", importance: "number", difficulty: "number", start: "date", edit: "date", end: "date", created: "date" });
                 console.log(t) } })(), o })() }));

@@ -63,3 +63,11 @@ let hourglass = {
 }
 let result = make_legit.formatActualObject(first, hourglass)
 console.log(result)
+
+let obj = make_legit.getObject([{ id: 2, }])
+console.log(obj)
+
+let original = { id: 1, whatsup: "nothing" }
+let update = { id: 2, whatsup: "im pissed" }
+let merged = make_legit.mergeWithOriginal(original, update)
+console.log(merged)

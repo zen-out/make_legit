@@ -59,7 +59,13 @@ let hourglass = {
     created: "date"
 }
 let result = make_legit.formatActualObject(first, hourglass)
+let obj = make_legit.getObject([{ id: 2, }])
+console.log(obj)
 
+let original = { id: 1, whatsup: "nothing" }
+let update = { id: 2, whatsup: "im pissed" }
+let merged = make_legit.mergeWithOriginal(original, update)
+console.log(merged)
 ```
 ## Instructions: 
 ```npm install make_legit ``` 
@@ -96,7 +102,14 @@ let result = make_legit.formatActualObject(first, hourglass)
 <dd></dd>
 <dt><a href="#formatActualObject">formatActualObject(actual, expected)</a> ⇒ <code>any</code></dt>
 <dd></dd>
+<dt><a href="#getObject">getObject(objectOrArray)</a> ⇒ <code>any</code></dt>
+<dd><ol>
+<li>If it&#39;s an array, will return the first item in array</li>
+</ol>
+</dd>
 <dt><a href="#getType">getType(data)</a> ⇒ <code>string</code></dt>
+<dd></dd>
+<dt><a href="#mergeWithOriginal">mergeWithOriginal(original, update)</a> ⇒ <code>any</code></dt>
 <dd></dd>
 </dl>
 
@@ -287,6 +300,23 @@ let first = {
     let formatted = formatObject(first, hourglass)
     console.log(formatted)
 ```
+<a name="getObject"></a>
+
+## getObject(objectOrArray) ⇒ <code>any</code>
+1. If it's an array, will return the first item in array
+
+**Kind**: global function  
+**Date**: 2022-03-10  
+**Author**: zen-out  
+
+| Param         | Type             |
+|---------------|------------------|
+| objectOrArray | <code>any</code> |
+
+**Example**  
+```js
+let isObjectOrArray = effective_knex.getObject([{id: 2}])
+```
 <a name="getType"></a>
 
 ## getType(data) ⇒ <code>string</code>
@@ -301,4 +331,22 @@ let first = {
 **Example**  
 ```js
 getType(data)
+```
+<a name="mergeWithOriginal"></a>
+
+## mergeWithOriginal(original, update) ⇒ <code>any</code>
+**Kind**: global function  
+**Date**: 2022-03-22  
+**Author**: zen-out  
+
+| Param    | Type             |
+|----------|------------------|
+| original | <code>any</code> |
+| update   | <code>any</code> |
+
+**Example**  
+```js
+let original = { id: 1, whatsup: "nothing" }
+    let update = { id: 2, whatsup: "im pissed" }
+    let merged = mergeWithOriginal(original, update)
 ```
